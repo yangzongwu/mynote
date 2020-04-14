@@ -9,7 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/mynote.iml" filepath="$PROJECT_DIR$/.idea/mynote.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mysite/.idea/mysite.iml" filepath="$PROJECT_DIR$/../mysite/.idea/mysite.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Github/other/.idea/other.iml" filepath="$PROJECT_DIR$/../Github/other/.idea/other.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Github/tkinter/.idea/python.iml" filepath="$PROJECT_DIR$/../Github/tkinter/.idea/python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/python/.idea/python.iml" filepath="$PROJECT_DIR$/../Github/python/.idea/python.iml" />
     </modules>
   </component>
 </project>
