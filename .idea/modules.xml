@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Github/APP/.idea/APP.iml" filepath="$PROJECT_DIR$/../Github/APP/.idea/APP.iml" />
       <module fileurl="file://$PROJECT_DIR$/../CS study/Python/.idea/Python.iml" filepath="$PROJECT_DIR$/../CS study/Python/.idea/Python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/System-Design/.idea/System-Design.iml" filepath="$PROJECT_DIR$/../Github/System-Design/.idea/System-Design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/Web/.idea/Web.iml" filepath="$PROJECT_DIR$/../Github/Web/.idea/Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/kivy-python/.idea/kivy-python.iml" filepath="$PROJECT_DIR$/../Github/kivy-python/.idea/kivy-python.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mynote.iml" filepath="$PROJECT_DIR$/.idea/mynote.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mysite/.idea/mysite.iml" filepath="$PROJECT_DIR$/../mysite/.idea/mysite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/other/.idea/other.iml" filepath="$PROJECT_DIR$/../Github/other/.idea/other.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Github/python/.idea/python.iml" filepath="$PROJECT_DIR$/../Github/python/.idea/python.iml" />
     </modules>
   </component>
 </project>

@@ -7,5 +7,11 @@
     <orderEntry type="module" module-name="Python" />
     <orderEntry type="module" module-name="Python" />
     <orderEntry type="module" module-name="mysite" />
+    <orderEntry type="module" module-name="other" />
+    <orderEntry type="module" module-name="System-Design" />
+    <orderEntry type="module" module-name="kivy-python" />
+    <orderEntry type="module" module-name="python" />
+    <orderEntry type="module" module-name="Web" />
+    <orderEntry type="module" module-name="APP" />
   </component>
 </module>
