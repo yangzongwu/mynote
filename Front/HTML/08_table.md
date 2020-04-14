@@ -1,0 +1,19 @@
+```html
+<table border="2">
+    <thead>
+        <th>Number</th>
+        <th>Color</th>
+        <th>Country</th>
+    </thead>
+    <tr>
+        <td>258</td>
+        <td>Red</td>
+        <td>USA</td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td>Green</td>
+        <td>Canada</td>
+    </tr>
+</table>
+```
