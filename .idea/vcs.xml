@@ -5,6 +5,6 @@
     <mapping directory="$PROJECT_DIR$/../Github/APP" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Github/System-Design" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Github/Web" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../Github/python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Github/tkinter" vcs="Git" />
   </component>
 </project>
