@@ -9,5 +9,6 @@
     <orderEntry type="module" module-name="mysite" />
     <orderEntry type="module" module-name="other" />
     <orderEntry type="module" module-name="APP" />
+    <orderEntry type="module" module-name="kivy-python" />
   </component>
 </module>
