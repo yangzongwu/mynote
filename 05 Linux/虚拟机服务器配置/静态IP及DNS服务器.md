@@ -16,6 +16,7 @@ VMware在默认安装完成之后，会创建三个虚拟的网络环境：
 ### 虚拟机
 setting里面的网络适配器选择“自定义”-->“VMnet8(NAT模式)”
 
+
 # Ubuntu设置
 ### 设置静态IP地址
 network setting-->wired-->add  
@@ -25,7 +26,8 @@ New profile-->IPv4
 * Address:192.168.28.* (* 0~255)
 * Netmask:255.255.255.0
 * Getway:192.168.28.2
-###　配置interfaces文件
+
+### 配置interfaces文件
 ```
 sudo gedit /etc/network/interfaces
 ```
@@ -39,7 +41,8 @@ address 192.168.8.100
 netmask 255.255.255.0
 gateway 192.168.8.2
 ```
-###　配置DNS服务器
+
+### 配置DNS服务器
 ```
 sudo gedit /etc/resolv.conf
 ```
@@ -47,11 +50,13 @@ sudo gedit /etc/resolv.conf
 nameserver 223.5.5.5
 nameserver 114.114.114.114
 ```
+
 ### 重启网络
 ```
 sudo /etc/init.d/networking restart
 ```
-###　报错处理
+
+### 报错处理
 * 无法启动网络显示“device not managed”
 ```
 sudo gedit /etc/NetworkManager/NetworkManager.conf

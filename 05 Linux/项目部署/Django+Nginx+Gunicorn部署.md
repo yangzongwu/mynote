@@ -35,7 +35,7 @@ sudo apt-get install git
 cd **/**
 git clone https://https://github.com/yangzongwu/mysite.git
 ```
-*　相关目录创建虚拟环境,并激活
+* 相关目录创建虚拟环境,并激活
 ```
 sudo pip3 install virtualenv
 virtualenv --python=python3 env
