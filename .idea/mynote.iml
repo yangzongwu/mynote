@@ -5,9 +5,9 @@
     <orderEntry type="jdk" jdkName="Python 3.7 (mysite)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Python" />
-    <orderEntry type="module" module-name="mysite" />
     <orderEntry type="module" module-name="other" />
     <orderEntry type="module" module-name="APP" />
     <orderEntry type="module" module-name="leetcode" />
+    <orderEntry type="module" module-name="mysite" />
   </component>
 </module>
