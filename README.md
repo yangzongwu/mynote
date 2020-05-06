@@ -1,2 +1,2 @@
 # mynote
-00 python
+00 pythonc
