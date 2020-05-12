@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User information</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
+  </head>
+  <body>
+    <h1>hi welcome to Django user_info</h1>
+    <h2>here are soome records</h2>
+    <div class="userinfo">
+      {% if user_info %}
+        <table>
+            <thead>
+              <th>First_name</th>
+              <th>Last_name</th>
+              <th>Email</th>
+            </thead>
+            {% for acc in user_info %}
+            <tr>
+              <td>{{ acc.First_Name }}</td>
+              <td>{{ acc.Last_Name }}</td>
+              <td>{{ acc.Email }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

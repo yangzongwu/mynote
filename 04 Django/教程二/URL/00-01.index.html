@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for k,row in user_dict.items %}
+        <li><a target = "blank" href="/detail/?nid={{ k }}">{{ row.name }}</a></li>
+        <!--#---02----->
+        <li><a target = "blank" href="/detail-{{ k }}.html">{{ row.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

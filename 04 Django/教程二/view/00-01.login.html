@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/login/" method="POST" enctype="multipart/form-data">
+        <!--POST 返回name内容-->
+        <!--若无enctype="multipart/form-data",返回的是字符串-->
+        <!--如果需要上传文件，需要增加enctype-->
+        <p>
+            <input type="text" name="user" placeholder="username">
+        </p>
+        <p>
+            <input type="text" name="pwd" placeholder="pwd">
+        </p>
+        <p>
+            men: <input type="radio" name="gender" value="1">
+            women:<input type="radio" name="gender" value="2">
+        </p>
+        <p>
+            men: <input type="checkbox" name="favor" value="1">
+            women:<input type="checkbox" name="favor" value="2">
+            other:<input type="checkbox" name="favor" value="3">
+        </p>
+        <p>
+            <select name="city">
+                <option value="sh">shanghai</option>
+                <option value="bj">beijing</option>
+                <option value="tj">tianjing</option>
+            </select>
+        </p>
+        <p>
+            <select name="city" multiple>
+                <option value="sh">shanghai</option>
+                <option value="bj">beijing</option>
+                <option value="tj">tianjing</option>
+            </select>
+        </p>
+        <p>
+            <input type="file" name="fff">
+        </p>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
