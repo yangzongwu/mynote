@@ -6,7 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Python" />
     <orderEntry type="module" module-name="other" />
-    <orderEntry type="module" module-name="APP" />
     <orderEntry type="module" module-name="leetcode" />
     <orderEntry type="module" module-name="mysite" />
   </component>
