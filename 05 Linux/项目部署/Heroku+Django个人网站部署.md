@@ -4,7 +4,7 @@
 # Django配置
 * Procfile文件  
 在项目文件夹下新建Procfile文件，注意无后缀     
-文件内容：gunicorn mysite.wsgi --log-file -    
+文件内容：web: gunicorn mysite.wsgi --log-file -    
 其中mysite就是你的项目名 
  
 * 数据库配置  
@@ -33,6 +33,7 @@ STATICFILES_DIRS = (
 * 生成 requirements.txt 文件  
 pip3 freeze > requirements.txt
 
+gunicorn
 
 # 配置Heroku
 * 下载安装Heroku  
