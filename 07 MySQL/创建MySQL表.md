@@ -11,4 +11,9 @@ mysql>show tables;
 mysql>select database();
 查看当前表的结构
 mysql>show columns from cart;
+创建数据表
+CREATE TABLE IF NOT EXISTS qiubai(
+   author varchar(20),
+   content varchar(200)
+);
 ```
