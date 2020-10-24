@@ -1,3 +1,10 @@
+引用  
+[Load Balancing](https://blog.csdn.net/wjn19921104/article/details/80171926)  
+[Load Balancing](https://blog.csdn.net/guofeng_hao/article/details/87920417)  
+[Load Balancing](https://blog.csdn.net/lihao21/article/details/53900447)  
+[Load Balancing](https://leehao.blog.csdn.net/article/details/54646297)  
+[Load Balancing](https://leehao.blog.csdn.net/article/details/54695471)  
+
 ### Load balancer (LB)  
 Is another critical piece of any distributed system. It helps to distribute load across multiple resources 
 according to some metric (random, round-robin, random with weighting for memory or CPU utilization, etc.). 
@@ -51,6 +58,8 @@ It also balances requests across all the machines in those pools.
 
 For most systems, we should start with a software load balancer and move to smart clients or hardware load 
 balancing as need arises.  
+
+
 
 # 算法  
 ### 均匀派发（Even Task Distribution Scheme）  
@@ -108,4 +117,40 @@ DNS服务器在派发IP地址时，正是使用轮流派发的方式来实现的
 
 参考资料  
 https://blog.csdn.net/lihao21/article/details/53900447  
-https://blog.csdn.net/lihao21/article/details/54695471  
+https://blog.csdn.net/lihao21/article/details/54695471 
+https://blog.csdn.net/tTU1EvLDeLFq5btqiK/article/details/81369904?
+
+# 负载均衡的方法
+### HTTP重定向
+HTTP重定向服务器是一台普通的Web服务器，用户的请求先到达重定向服务器，这台服务器会挑选一台后端服务器的地址（例如使用轮询的方式），并将该地址写入HTTP重定向响应结果中（以响应状态码302返回）返回给用户。用户将根据这个新的地址重新发送请求到选中的服务器上。选中的服务器会处理用户请求，并将结果返回给用户。
+### DNS负载均衡
+DNS负载均衡的实现原理是在DNS服务器中为同一个主机名配置多个IP地址，在应答DNS查询时，DNS服务器对于每个查询将以DNS记录的IP地址按顺序返回不同的解析结果，将客户端的访问引导到不同的机器上去，使得不同客户端访问不同的服务器，从而达到负载均衡的目的。
+### 反向代理
+反向代理服务器的工作主要是转发HTTP请求，因此它工作在HTTP层，也就是OSI七层结构中的应用层（第七层），所以基于反向代理的负载均衡也称为七层负载均衡。  
+反向代理服务处于后端服务器的前面，由于需要直接受用户的请求，故反向代理服务器需要一个外网IP。而后端服务器并不直接对外提供访问，因此后端服务器并不需要外网IP。反向代理服务器通过内网IP与后端服务器进行通信。图3中，浏览器的请求到达反向代理服务器114.113.200.84，反向代理服务器收到请求后，根据负载均衡算法计算得到一台真实的后端服务器地址10.0.0.1，并将请求转发到这台后端服务器。10.0.0.1处理请求后将响应返回给反向代理服务器，再由反向代理服务器将该响应返回给用户。
+常见的反向代理服务器包括Nginx，Apache，Haproxy等。
+### IP负载均衡
+### 数据链路层负载均衡
+
+# 常见互联网分布式架构
+客户端层、反向代理nginx层、站点层、服务层、数据层。  
+### 【客户端层->反向代理层】的负载均衡
+通过“DNS轮询”实现的：DNS-server对于一个域名配置了多个解析ip，每次DNS解析请求来访问DNS-server，会轮询返回这些ip，保证每个ip的解析概率是相同的。这些ip就是nginx的外网ip，以做到每台nginx的请求分配也是均衡的。  
+### 【反向代理层->站点层】的负载均衡
+【反向代理层】到【站点层】的负载均衡，是通过“nginx”实现的。通过修改nginx.conf，可以实现多种负载均衡策略：  
+* 请求轮询：和DNS轮询类似，请求依次路由到各个web-server
+* 最少连接路由：哪个web-server的连接少，路由到哪个web-server
+* ip哈希：按照访问用户的ip哈希值来路由web-server，只要用户的ip分布是均匀的，请求理论上也是均匀的，ip哈希均衡方法可以做到，同一个用户的请求固定落到同一台web-server上，此策略适合有状态服务，例如session(58沈剑备注：可以这么做，但强烈不建议这么做，站点层无状态是分布式架构设计的基本原则之一，session最好放到数据层存储)
+* …
+### 【站点层->服务层】的负载均衡  
+【站点层】到【服务层】的负载均衡，是通过“服务连接池”实现的。  
+上游连接池会建立与下游服务多个连接，每次请求会“随机”选取连接来访问下游服务。  
+### 【数据层】的负载均衡  
+在数据量很大的情况下，由于数据层(db，cache)涉及数据的水平切分，所以数据层的负载均衡更为复杂一些，它分为“数据的均衡”，与“请求的均衡”。
+* 数据的均衡是指：水平切分后的每个服务(db，cache)，数据量是差不多的。
+* 请求的均衡是指：水平切分后的每个服务(db，cache)，请求量是差不多的。
+### 总结
+* 【客户端层】到【反向代理层】的负载均衡，是通过“DNS轮询”实现的
+* 【反向代理层】到【站点层】的负载均衡，是通过“nginx”实现的
+* 【站点层】到【服务层】的负载均衡，是通过“服务连接池”实现的
+* 【数据层】的负载均衡，要考虑“数据的均衡”与“请求的均衡”两个点，常见的方式有“按照范围水平切分”与“hash水平切分”
