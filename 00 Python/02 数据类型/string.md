@@ -7,7 +7,7 @@ str4 = "Thelanguage'Python'isnamedafterMontyPython,notthesnake."
 str5 = "OneofPython'sstrengthsisitsdiverseandsupportivecommunity."
 ```
 
-# 字符串基本操作
+## 字符串基本操作
 所有标准序列操作（索引、切片、乘法、成员资格检查、长度、最小值和最
 大值）都适用于字符串，但别忘了字符串是不可变的，因此所有的元素赋值和切片赋值都是非
 法的。  
@@ -19,7 +19,7 @@ str5 = "OneofPython'sstrengthsisitsdiverseandsupportivecommunity."
 值（如字符串或数字），可使用元组（如果要设置多个值的格式），还可使用字典（这将在下一章
 讨论），其中最常见的是元组。
 ```
->>> format = "Hello, s. s enough for ya?"  %   %
+>>> format = "Hello, s. s enough for ya?"  %   %
 >>> values = ('world', 'Hot')
 >>> format values  %
 
@@ -88,20 +88,20 @@ print("Languages:\n\tPython\n\tC\n\tJavaScript")
 ```
 ```
 Languages:
-        Python
-        C
-        JavaScript
+    Python
+    C
+    JavaScript
 ```
 
 
 ### 删除空白
 ```python
-favorite_language = " python  "
-favorite_language.rstrip()     # ' python'
+favorite_language = " python"
+favorite_language.rstrip()     # 'python'
 ```
 要永久删除这个字符串中的空白，必须将删除操作的结果存回到变量中
 ```python
-favorite_language = ' python'
+favorite_language = 'python'
 favorite_language = favorite_language.rstrip()
 print(favorite_language)  # 'python'
 ```
@@ -112,10 +112,10 @@ print(favorite_language)  # 'python'
 ### center
 方法center通过在两边添加填充字符（默认为空格）让字符串居中。
 ```
->>> "The Middle by Jimmy Eat World".center(39)
-' The Middle by Jimmy Eat World '
->>> "The Middle by Jimmy Eat World".center(39, "*")
-'*****The Middle by Jimmy Eat World*****'
+>>> "The Middle by Jimmy Eat World".center(39)
+'The Middle by Jimmy Eat World'
+>>>"The Middle by Jimmy Eat World".center(39,"*")
+'*****The Middle by Jimmy Eat World*****'
 ```
 
 

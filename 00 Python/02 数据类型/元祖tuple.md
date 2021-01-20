@@ -57,10 +57,10 @@ Traceback(mostrecentcalllast):
 ```
 dimensions=(200,50)
 print("Originaldimensions:")
-for dimension in dimensions:
+for dimension in dimensions:
     print(dimension)    #200,50
 dimensions=(400,100)
 print("\nModifieddimensions:")
-for dimension in dimensions:
+for dimension in dimensions:
     print(dimension)    #400,100
 ```
